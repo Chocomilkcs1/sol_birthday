@@ -4,6 +4,8 @@
 <title>For Sol's Birthday :D</title>
 
 <style>
+
+
 body{
   background:#0f0f14;
   color:white;
@@ -49,7 +51,39 @@ a{
 }
 </style>
 </head>
+  <script>
+const amount = 40;
 
+for(let i=0;i<amount;i++){
+  const star = document.createElement("div");
+  star.className="star";
+
+  star.style.left=Math.random()*100+"vw";
+  star.style.animationDelay=Math.random()*5+"s";
+  star.style.animationDuration=3+Math.random()*5+"s";
+
+  document.body.appendChild(star);
+}
+    .star{
+  position:fixed;
+  top:-10px;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  opacity:0.7;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh);
+    opacity:0;
+  }
+}
+
+    
+</script>
 <body>
 
 <h1>For Sol's Birthday!</h1>
