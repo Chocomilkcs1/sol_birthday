@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-<script>
-for(let i=0;i<15;i++){
-  const heart=document.createElement("div");
-  heart.innerHTML="❤";
-  heart.style.position="fixed";
-  heart.style.left=Math.random()*100+"vw";
-  heart.style.top="110vh";
-  heart.style.opacity=0.15;
-  heart.style.fontSize=(12+Math.random()*20)+"px";
-  heart.style.animation=`float ${5+Math.random()*6}s linear infinite`;
-  document.body.appendChild(heart);
-}
-</script>
 
 <style>
 @keyframes float{
@@ -27,7 +14,7 @@ for(let i=0;i<15;i++){
 <body style="background:#0f0f14;color:white;font-family:Arial;text-align:center;padding:40px;">
 
 <h1>Glue Song — Beabadoobee</h1>
-<p style="opacity:0.7;font-size:14px">listen with headphones</p>
+
 
 <iframe style="border-radius:12px"
 src="https://open.spotify.com/embed/track/3iBgrkexCzVuPy4O9vx7Mf"
@@ -99,6 +86,39 @@ onmouseout="this.style.background='#1f2230'">
 function reaction(){
   alert("im just adding random stuff atp..");
 }
+</script>
+<style>
+@keyframes float{
+  from{
+    transform:translateY(0);
+    opacity:0.15;
+  }
+  to{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+}
+</style>
+
+<script>
+window.onload = () => {
+
+for(let i=0;i<18;i++){
+  const heart=document.createElement("div");
+  heart.innerHTML="❤";
+
+  heart.style.position="fixed";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.top="105vh";
+  heart.style.opacity="0.18";
+  heart.style.fontSize=(14+Math.random()*22)+"px";
+  heart.style.pointerEvents="none";
+  heart.style.animation=`float ${7+Math.random()*8}s linear infinite`;
+
+  document.body.appendChild(heart);
+}
+
+};
 </script>
 
 </body>
